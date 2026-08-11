@@ -13,7 +13,7 @@ Note: This project will be an ongoing endeavor with new features and updates bei
 
 Instead of deploying a single, complicated application, this project aims to build a simple three-tier application environment:
 
-'''
+```
 Namespace: test-lab
 
          |
@@ -30,4 +30,4 @@ API Pod: BusyBox
          V
 
 Backend Pod: PostgreSQL
-'''
+```

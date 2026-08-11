@@ -1,0 +1,7 @@
+# YAML File to create the namespace the project will live in
+# This namespace will exist in a local minikube cluster
+apiVersion: v1
+kind: Namespace
+
+metadata:
+  name: test-lab

@@ -53,3 +53,17 @@ touch postgres-service.yaml
 touch busybox.yaml
 touch nginx.yaml
 ```
+
+## Creating the Project Namespace
+
+After spinning up the local minikube cluster, the first step is to use the `namespace.yaml` file to create the project namespace. This can be done using:
+
+``` bash
+kubectl apply -f namespace.yaml
+```
+
+The following command can be used to verify the namespace was created successfully:
+
+``` bash
+kubectl get ns
+```

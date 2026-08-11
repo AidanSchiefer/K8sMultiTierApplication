@@ -7,7 +7,7 @@ multi-tier application by deploying different images for the Frontend, API layer
 deployment files, practicing using the kubectl command, and get a better understanding of how Kubernetes may be used at a higher level when mixed with
 different tech stacks. 
 
-Note: This project will be an ongoing endeavor with new features and updates being made to it.
+*Note:* This project will be an ongoing endeavor with new features and updates being made to it.
 
 ### Outline of the Environment
 
@@ -30,4 +30,25 @@ API Pod: BusyBox
          V
 
 Backend Pod: PostgreSQL
+```
+
+## Creating the Project Structure
+
+When creating this project, the following structure was used.
+
+Create a project directory:
+
+``` bash
+mkdir k8s-3tier-lab
+cd k8s-3tier-lab
+```
+
+Create the necessary files:
+
+``` bash
+touch namespace.yaml
+touch postgres.yaml
+touch postgres-service.yaml
+touch busybox.yaml
+touch nginx.yaml
 ```

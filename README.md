@@ -81,3 +81,19 @@ The following command can be used to verify the Postgres deployment was created 
 ``` bash
 kubectl get pods -n test-lab
 ```
+
+## Creating a PostgreSQL Service
+
+Since pods can come and go, having an actual service deployed allows the cluster to have stable networking even if pods go down
+
+The PostgreSQL service must be deployed using the `postgres-service.yaml` file. This can be done using:
+
+``` Bash
+kubectl apply -f postgres-service.yaml
+```
+
+The following command can be used to verify the Postgres Service was created successfully:
+
+``` Bash
+kubectl get svc -n test-lab
+```

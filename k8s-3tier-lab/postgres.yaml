@@ -1,0 +1,30 @@
+# YAML configuration for the PostgreSQL Deployment. This deployment will live in the test-lab namespace
+apiVersion: apps/v1
+kind: Deployment
+
+spec:
+  replicas: 1
+
+  selector:
+    metadata:
+      labels:
+        app: postgres
+
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:16
+
+        # Username, password, and db name are defined locally. Will not be pushed to GitHub
+        env:
+        - name: POSTGRES_USER
+          value: username
+
+        - name: POSTGRES_PASSWORD
+          value: password
+
+        - name: POSTGRES_DB
+          value: dbname
+
+        ports:
+        - containerPort: 5432

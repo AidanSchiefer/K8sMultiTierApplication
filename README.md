@@ -97,3 +97,20 @@ The following command can be used to verify the Postgres Service was created suc
 ``` Bash
 kubectl get svc -n test-lab
 ```
+
+## Testing PostgreSQL Connectivity with BusyBox
+
+The next step in building this Multi-Tier appliation is creating the API connector between the backend and the frontend. To start, this will be done using 
+a BusyBox Pod.
+
+The BusyBox Pod must be deployed using the `busybox.yaml` file. This can be done using:
+
+``` Bash
+kubectl apply -f busybox.yaml
+```
+
+The following command can be used to verify the BusyBox Pod was created successfully:
+
+``` Bash
+kubectl get pods -n test-lab
+```

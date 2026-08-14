@@ -1,0 +1,7 @@
+# YAML configuration for PostgreSQL Service deployment. This service will live in the test-lab namespace
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: postgres
+  namespace: test-lab

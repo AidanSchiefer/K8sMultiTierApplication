@@ -1,0 +1,18 @@
+# YAML configuration for BusyBox Pod deployment. This pod will exist in the test-lab namespace
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: busybox
+  namespace: test-lab
+
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+
+    command:
+    - sleep
+
+    args:
+    - "36000"

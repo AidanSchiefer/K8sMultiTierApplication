@@ -67,3 +67,17 @@ The following command can be used to verify the namespace was created successful
 ``` bash
 kubectl get ns
 ```
+
+## Deploying a PostgreSQL Backend
+
+Now that the projects namespace has been created, the PostgreSQL backend must be deployed using the `postgres.yaml` file. This can be done using:
+
+``` Bash
+kubectl apply -f postgres.yaml
+```
+
+The following command can be used to verify the Postgres deployment was created sucessfully:
+
+``` bash
+kubectl get pods -n test-lab
+```

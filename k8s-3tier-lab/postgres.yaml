@@ -10,6 +10,10 @@ spec:
   replicas: 1
 
   selector:
+    matchLabels:
+      app: postgres
+
+  template:
     metadata:
       labels:
         app: postgres
@@ -28,7 +32,7 @@ spec:
           value: password
 
         - name: POSTGRES_DB
-          value: dbname
+          value: AppDB
 
         ports:
         - containerPort: 5432

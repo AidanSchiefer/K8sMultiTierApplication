@@ -121,3 +121,33 @@ The following command can be used to verify the BusyBox Pod was created successf
 ``` Bash
 kubectl get pods -n test-lab
 ```
+
+## Entering the BusyBox Pod
+
+You can open up a shell CLI inside the BusyBox Pod using the following command:
+
+``` Bash
+kubectl exec -it busybox -n test-lab -- sh
+```
+
+Inside the BusyBox Pod, you can test the DNS connection using the following command:
+
+``` Bash
+nslookup postgres
+```
+
+## Deploying the Nginx Frontend
+
+Now that the backend and the API layer have been deployed, all that is left is to deploy the nginx frontend
+
+The nginx deployment must be deployed using the `nginx.yaml` file. This can be done using:
+
+``` Bash
+kubectl apply -f nginx.yaml
+```
+
+The following command can be used to verify the nginx deployment was created successfully:
+
+``` Bash
+kubectl get deployment -n test-lab
+```

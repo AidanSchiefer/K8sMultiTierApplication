@@ -3,7 +3,7 @@
 ## Overview
 
 This project (starting out) is a basic "Learning Kubernetes" project along with understanding some system design. This project mimics deploying a
-multi-tier application by deploying different images for the Frontend, API layer, and Backend. This project aims to be a good practice for writing YAML
+multi-tier application by deploying different images pulled from Docker for the Frontend, API layer, and Backend. This project aims to be a good practice for writing YAML
 deployment files, practicing using the kubectl command, using Docker and Docker images, and get a better understanding of how Kubernetes may be used at a higher level when mixed with
 different tech stacks. 
 
@@ -31,6 +31,13 @@ API Pod: BusyBox
 
 Backend Pod: PostgreSQL
 ```
+
+### Future Development Plans
+
+* Replace the BusyBox deployment with a custom Python or GO API layer for interacting dynamically with the Postgres backend
+* Update the frontend to be a custom JavaScript website that will interact with the API layer to get data from the backend
+* Set up GitHub Actions CI/CD Pipeline to automatically catch errors and re-deploy the cluster every push
+* Fully flesh out the project to be an imitation of a VMware vSphere or RedHat OpenShift UI/functionality. Spinning up "VMs" will be image deployments
 
 ## Creating the Project Structure
 

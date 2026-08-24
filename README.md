@@ -155,3 +155,27 @@ kubectl get deployment -n test-lab
 ## Creating the Custom Python API Layer
 
 This part of the project is currently being developed. The goal is to use FastAPI to be able to communicate with the Postgres DB. 
+
+For setting up the python environment, run the following command to set up the virtual environment
+
+``` Bash
+python3 -m venv venv
+```
+
+Activate the environment by running the following script (Windows in my personal context). This must be run every time a new terminal session is created
+
+``` Bash
+venv/Scripts/activate.ps1
+```
+
+After the local virtual environment has been made, install the FastAPI package
+
+``` Bash
+pip install "fastapi[standard]
+```
+
+For when it is time to create a Docker image, run the following command once all necessary dependencies are installed
+
+``` Bash
+pip freeze > requirements.txt
+```

@@ -34,7 +34,7 @@ Backend Pod: PostgreSQL
 
 ### Future Development Plans
 
-* Replace the BusyBox deployment with a custom Python or GO API layer for interacting dynamically with the Postgres backend
+* Replace the BusyBox deployment with a custom Python or GO API layer for interacting dynamically with the Postgres backend (IN PROGRESS)
 * Update the frontend to be a custom JavaScript website that will interact with the API layer to get data from the backend
 * Set up GitHub Actions CI/CD Pipeline to automatically catch errors and re-deploy the cluster every push
 * Fully flesh out the project to be an imitation of a VMware vSphere or RedHat OpenShift UI/functionality. Spinning up "VMs" will be image deployments
@@ -151,3 +151,7 @@ The following command can be used to verify the nginx deployment was created suc
 ``` Bash
 kubectl get deployment -n test-lab
 ```
+
+## Creating the Custom Python API Layer
+
+This part of the project is currently being developed. The goal is to use FastAPI to be able to communicate with the Postgres DB. 

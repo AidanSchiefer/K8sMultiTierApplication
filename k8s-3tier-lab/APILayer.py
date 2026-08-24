@@ -4,4 +4,10 @@
 # 2. Once able to communicate and get data, export this file as a Docker image to be pulled down in the future
 
 # import the FastAPI package
-from fastapi import FastAPI
+import fastapi
+
+# Verify that FastAPI has been installed and print the current version. Throw an error otherwise
+try:
+    print(fastapi.__version__)
+except:
+    print(Exception)

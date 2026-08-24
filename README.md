@@ -171,7 +171,7 @@ venv/Scripts/activate.ps1
 After the local virtual environment has been made, install the FastAPI package
 
 ``` Bash
-pip install "fastapi[standard]
+pip install "fastapi[standard]"
 ```
 
 For when it is time to create a Docker image, run the following command once all necessary dependencies are installed

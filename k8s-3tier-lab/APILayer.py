@@ -11,3 +11,11 @@ try:
     print(fastapi.__version__)
 except:
     print(Exception)
+
+# Create a fastAPI object
+app = FastAPI()
+
+# Get the root API path
+@app.get("/")
+async def root():
+    return {"message": "Hello There"}
